@@ -1,0 +1,8 @@
+<h1>{{ hyip.name }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="/listing/{{ hyip.id }}/detail/" method="post">
+{% csrf_token %}
+
+</form>

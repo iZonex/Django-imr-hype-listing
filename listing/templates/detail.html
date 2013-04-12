@@ -1,0 +1,81 @@
+{% load comments %}
+<a href="{{ hyip.url }}"  target="_blank">{{ hyip.name }}</a> [{{ hyip.group }}] {{ hyip.New_status }}<br /><br />
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{{ hyip.status_hyip }}
+{{ hyip.get_test }}
+
+    <img width="125" id="{{ hyip.name }}" src="/media/{{ hyip.img }}" border=""><br />
+    <img src="/static/listing/{{ hyip.status }}.png" width="108" height="25" border=""><br />
+    <img src="/static/listing/{{ hyip.rating }}.png" width="128" height="55" border=""><br />
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Term</th>
+                <th>Withdrawl</th>
+                <th>Minimal</th>
+                <th>Maximal</th>
+                <th>Total Profit</th>
+            </tr>
+        </thead>
+    </tbody>
+
+    {% for plan in hyip.plan_set.all %}
+       <tr>
+       <td>{{ plan.name }}</td>
+       <td>{{ plan.term }} Days</td>
+       <td>{{ plan.withdrawl }}</td>
+       <td>{{ plan.min_invest }} $</td>
+       <td>{{ plan.max_invest }} $</td>
+       <td>{{ plan.profit }} %</td>
+   </tr>
+    {% endfor %}
+    <b>{{ hyip.check_online }}</b><br />
+    Workdays: {{ hyip.Working_Time }} days<br />
+    Withdrawl: {{ hyip.Show_withdrawl_type }}<br />
+    Referral: {{ hyip.referral }}<br />
+    RCB: {{ hyip.RCB }}<br />
+    Support e-mail: {{ hyip.support_email }}<br />
+    Admin e-mail: {{ hyip.admin_email }}<br />
+    Start Day: {{ hyip.Day_start }}<br />
+    Date Added: {{ hyip.date_added }}<br />
+    Date Start: {{ hyip.date_start }}<br />
+    Domain End: {{ hyip.expiration }}<br />
+    Our Invest: {{ hyip.Total_Invest }} $<br />
+    Total Withdraw: {{ hyip.Total_Withdraw }} $ <br />
+    ROI: {{ hyip.ROI }} %<br />
+    {# Paysystems: {{ hyip.Show_Paysystem }}<br /> #}
+    Workday: {{ hyip.workday }}<br />
+    Withdrawl Time: {{ hyip.withdrawl_time }}<br />
+    Description: {{ hyip.description|truncatechars:220 }}<br /><br />
+    Review: {{ hyip.review|truncatechars:220 }}<br /><br />
+
+    <table>
+        <thead>
+            <tr>
+                <th>Type Paymant</th>
+                <th>Account</th>
+                <th>Summ</th>
+                <th>Bantch</th>
+                <th>Date</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+    </tbody>
+
+    {% for withdrawl in hyip.withdrawl_set.all %}
+       <tr>
+       <td>{{ withdrawl.Show_TypePamant }}</td>
+       <td>{{ withdrawl.account }}</td>
+       <td>{{ withdrawl.summ }}</td>
+       <td>{{ withdrawl.bantch }}</td>
+       <td>{{ withdrawl.with_draw }}</td>
+       <td>{{ withdrawl.comments|truncatechars:40 }}</td>
+   </tr>
+    {% endfor %}
+
+    {% get_comment_count for hyip as comment_count %}
+    Comments: {{ comment_count }}<br />

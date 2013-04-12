@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-23 00:29+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: models.py:7
+msgid "group_name"
+msgstr "Имя группы"
+
+#: models.py:8
+msgid "group_type"
+msgstr "Тип группы"
+
+#: models.py:13
+msgid "paysystem_name"
+msgstr "Название платежки"
+
+#: models.py:14
+msgid "paysystem_url"
+msgstr "Сайт платежки"
+
+#: models.py:20
+msgid "bantch"
+msgstr "Номер"
+
+#: models.py:22
+msgid "with_draw"
+msgstr "Вывод"
+
+#: models.py:23
+msgid "summ"
+msgstr "Сумма"
+
+#: models.py:24 models.py:112
+msgid "comments"
+msgstr "Комментарий"
+
+#: models.py:29
+msgid "name"
+msgstr "Имя"
+
+#: models.py:31
+msgid "group"
+msgstr "Группа"
+
+#: models.py:33
+msgid "url"
+msgstr "Адрес"
+
+#: models.py:35
+msgid "img"
+msgstr "Картинка"
+
+#: models.py:52
+msgid "status"
+msgstr "Статус"
+
+#: models.py:62 models.py:113
+msgid "rating"
+msgstr "Рейтинг"
+
+#: models.py:70
+msgid "paylisting"
+msgstr "Платный листинг"
+
+#: models.py:72
+msgid "plans"
+msgstr "Планы"
+
+#: models.py:79
+msgid "withdrawl_type"
+msgstr "Тип вывода"
+
+#: models.py:81
+msgid "referral"
+msgstr "Реферал бонус"
+
+#: models.py:83
+msgid "RCB"
+msgstr "ВРБ"
+
+#: models.py:85
+msgid "support_email"
+msgstr "Почта поддержки"
+
+#: models.py:87
+msgid "date_added"
+msgstr "Дата добавления"
+
+#: models.py:88
+msgid "date_start"
+msgstr "Дата начала"
+
+#: models.py:90
+msgid "description"
+msgstr "Описание"
+
+#: models.py:92
+msgid "review"
+msgstr "Обзор"
+
+#: models.py:94
+msgid "payed"
+msgstr "Платит"
+
+#: models.py:95
+msgid "summ_pay"
+msgstr "Сумма выплат"
+
+#: models.py:96
+msgid "account"
+msgstr "Аккаунт"
+
+#: models.py:98
+msgid "workday"
+msgstr "Рабочие дни"
+
+#: models.py:99
+msgid "withdrawl_time"
+msgstr "Время ожидания вывода"
+
+#: models.py:111
+msgid "user"
+msgstr "Пользователь"
+
+#: models.py:114
+msgid "hyip_name"
+msgstr "Название"

@@ -1,0 +1,9 @@
+{% if latest_hyip_list %}
+    <ul>
+    {% for poll in latest_hyip_list %}
+        <li><a href="/listing/{{ hyip.id }}/">{{ hyip.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hyips are available.</p>
+{% endif %}

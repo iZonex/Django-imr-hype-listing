@@ -1,0 +1,48 @@
+{% include "index.html" %}
+{% load comments %}
+{% for hyip in hyips %}
+
+    {# Each "contact" is a Contact model object. #}
+    <a href="{{ hyip.url }}"  target="_blank"><h1>{{ hyip.name }}</h1></a>
+    <img width="125" id="{{ hyip.name }}" src="/media/{{ hyip.img }}" border=""><br />
+    <img src="/static/listing/{{ hyip.status }}.png" width="108" height="25" border=""><br />
+    <img src="/static/listing/{{ hyip.rating }}.png" width="128" height="55" border=""><br />
+    Plans: {{ hyip.plans }}<br />
+    Workdays: {{ hyip.Working_Time }} days<br />
+    Withdrawl: {{ hyip.Show_withdrawl_type }}<br />
+    Group: {{ hyip.group }}<br />
+    Referral: {{ hyip.referral }}<br />
+    RCB: {{ hyip.RCB }}<br />
+    Support e-mail: {{ hyip.support_email }}<br />
+    Date Added: {{ hyip.date_added }}<br />
+    Date Start: {{ hyip.date_start }}<br /><br />
+    Our Invest: {{ hyip.Total_Invest }} $<br />
+    Total Withdraw: {{ hyip.Total_Withdraw }} $ <br />
+    ROI: {{ hyip.ROI }} %<br />
+    {# Paysystems: {{ hyip.Show_Paysystem }}<br /> #}
+    Workday: {{ hyip.workday }}<br />
+    Withdrawl Time: {{ hyip.withdrawl_time }}<br />
+    Description: {{ hyip.description|truncatechars:220 }}<br /><br />
+    Review: {{ hyip.review|truncatechars:220 }}<br /><br />
+    {% get_comment_count for hyip as comment_count %}
+    Comments: {{ comment_count }}<br />
+    <a href="/listing/{{ hyip.name }}/">Details</a><br /><br /><br />
+    
+{% endfor %}
+
+
+<div class="pagination">
+    <span class="step-links">
+        {% if hyips.has_previous %}
+            <a href="?page={{ hyips.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ hyips.number }} of {{ hyips.paginator.num_pages }}.
+        </span>
+
+        {% if hyips.has_next %}
+            <a href="?page={{ hyips.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
